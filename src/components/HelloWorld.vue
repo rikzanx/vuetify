@@ -5,23 +5,39 @@
       </v-toolbar-side-icon>
     </span>
     <v-toolbar-title>
+
       <router-link to="/" tag="span" style="cursor: pointer">
         <v-img height="50" src="@/assets/logo-1.png" />
       </router-link>
+
     </v-toolbar-title>
     <v-spacer></v-spacer>
-    <v-toolbar-items class="hidden-xs-only">
 
-      <v-sheet width="300" class="mx-auto">
-        <v-form @submit.prevent>
-          <v-text-field class="pencarian" v-model="firstName" :rules="rules" bg-color="white">
-            <template v-slot:append>
-              <v-btn variant="text" icon="mdi-magnify"></v-btn>
-            </template>
+    <v-toolbar-items class="hidden-xs-only">
+      <!-- <div class="coba">
+         <v-text-field class="pencarian" v-model="firstName" :rules="rules" bg-color="white">
+
           </v-text-field>
           <v-btn type="submit" inline-block class="mt-2"></v-btn>
-        </v-form>
-      </v-sheet>
+      </div> -->
+
+      <v-row
+        align="center"
+        no-gutters
+        style="height:80px; background-color:blue;"
+      >
+        <v-col
+        >
+          <v-text-field class="pencarian" v-model="firstName" :rules="rules" bg-color="white">
+
+            </v-text-field>
+        </v-col>
+</v-row>
+
+
+
+
+
 
       <v-menu>
         <template v-slot:activator="{ props }">
@@ -54,6 +70,40 @@
     </v-toolbar-items>
   </v-toolbar>
 
+    <v-container>
+    <v-row>
+      <v-col cols="12">
+        <div class="d-flex justify-space-between" style="background-color:red;">
+      <router-link to="/" tag="span" style="cursor: pointer">
+        <v-img height="50" width="50px" src="@/assets/logo-1.png" />
+      </router-link>
+
+      <div class="div" style="width:350px;height:50px;background-color:white;">
+        <v-text-field append-inner-icon="mdi-magnify" single-line></v-text-field>
+        <!-- <v-img height="50" width="50px" src="@/assets/logo-1.png" />
+         -->
+      </div>
+
+      <router-link to="/" tag="span" style="cursor: pointer">
+        <v-img height="50" width="50px" src="@/assets/logo-1.png" />
+      </router-link>
+
+      <router-link to="/" tag="span" style="cursor: pointer">
+        <v-img height="50" width="150px" src="@/assets/logo-1.png" />
+      </router-link>
+
+      <router-link to="/" tag="span" style="cursor: pointer">
+        <v-img height="50" width="150px" src="@/assets/logo-1.png" />
+      </router-link>
+
+      <router-link to="/" tag="span" style="cursor: pointer">
+        <v-img height="50" width="100px" src="@/assets/logo-1.png" />
+      </router-link>
+        </div>
+      </v-col>
+    </v-row>
+  </v-container>
+
 
   <v-sheet class="d-flex align-center justify-center flex-wrap text-center mx-auto" elevation="0" min-height="600"
     width="100%">
@@ -64,6 +114,8 @@
       <p class="header-title-sub">The gypsy Trending Web Apps</p>
     </div>
   </v-sheet>
+
+
 
 
   <v-container>
@@ -462,6 +514,27 @@
       <v-btn variant="text" icon="mdi-home"></v-btn>
     </div>
   </v-footer>
+
+
+<v-row
+        align="center"
+        no-gutters
+        style="height: 150px; background-color:blue;"
+      >
+        <v-col
+        >
+          <v-text-field class="pencarian" v-model="firstName" :rules="rules" bg-color="white">
+
+            </v-text-field>
+        </v-col>
+</v-row>
+    <!-- <div class="nyobak" align="center" style="height:600px;background-color:blue;">
+      <v-text-field class="pencarian" v-model="firstName" :rules="rules" bg-color="white">
+
+            </v-text-field>
+    </div> -->
+
+
 </template>
 
 <script setup>
@@ -492,6 +565,13 @@ export default {
 </script>
 
 <style>
+.v-text-field,.v-input__control{
+  height: 50px !important;
+}
+
+:deep(.pencarian){
+  border-block-color: red;
+}
 .input-area {
   width: 300px;
   border-top: 1px solid black;
@@ -508,6 +588,9 @@ export default {
   background-color: red;
 }
 
+.coba {
+
+}
 
 
 .sub-menu-btn {
