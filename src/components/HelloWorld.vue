@@ -1,4 +1,5 @@
 <template>
+
   <v-toolbar app class="bg-white">
     <span class="hidden-sm-and-up">
       <v-toolbar-side-icon @click="sidebar = !sidebar">
@@ -70,19 +71,27 @@
     </v-toolbar-items>
   </v-toolbar>
 
-    <v-container>
+    <!-- <v-container>
     <v-row>
       <v-col cols="12">
-        <div class="d-flex justify-space-between" style="background-color:red;">
+        <div class="d-flex justify-space-between" style="">
       <router-link to="/" tag="span" style="cursor: pointer">
         <v-img height="50" width="50px" src="@/assets/logo-1.png" />
       </router-link>
 
-      <div class="div" style="width:350px;height:50px;background-color:white;">
-        <v-text-field append-inner-icon="mdi-magnify" single-line></v-text-field>
-        <!-- <v-img height="50" width="50px" src="@/assets/logo-1.png" />
-         -->
-      </div>
+
+      <v-row align="center" no-gutters>
+    <v-col cols="12" sm="12" md="6">
+      <v-text-field
+        v-model="searchValue"
+        label="Search"
+        class="search-field"
+        dense
+        append-icon="mdi-magnify"
+        append-icon-class="search-icon"
+      />
+    </v-col>
+  </v-row>
 
       <router-link to="/" tag="span" style="cursor: pointer">
         <v-img height="50" width="50px" src="@/assets/logo-1.png" />
@@ -102,7 +111,7 @@
         </div>
       </v-col>
     </v-row>
-  </v-container>
+  </v-container> -->
 
 
   <v-sheet class="d-flex align-center justify-center flex-wrap text-center mx-auto" elevation="0" min-height="600"
@@ -110,7 +119,7 @@
     <v-img width="100%" src="@/assets/header.png" />
     <div class="jumbotron-text">
 
-      <p align="center" class="header-title">What are you Looking for.. ?</p>
+      <p align="center" class="header-title" style="">What are you Looking for.. ?</p>
       <p class="header-title-sub">The gypsy Trending Web Apps</p>
     </div>
   </v-sheet>
@@ -121,12 +130,39 @@
   <v-container>
     <v-row>
       <v-col cols="6" offset="3">
-        <div class="d-flex flex-row justify-center mb-6 ">
-          <v-btn class="sub-menu-btn active">
-            View All
-            <span class="badge active">2.7K</span>
+        <div class="d-flex flex-row justify-center mb-6 " >
+          <v-btn class="sub-menu-btn active" style="box-shadow: 0px 5px 25px rgba(0, 0, 0, 0);">
+            <p style="font-size: 12px" eleva>View all</p>
+            <span class="badge active" style="margin-left: 16px;">2.7K</span>
           </v-btn>
-          <v-btn class="sub-menu-btn">
+          <v-btn class="sub-menu-btn " style="box-shadow: 0px 5px 25px rgba(0, 0, 0, 0); border: 1px solid #D9D9D9;
+border-radius: 50px;" >
+            <p style="font-size: 12px">View all</p>
+            <span class="badge " style="margin-left: 16px;">2.7K</span>
+          </v-btn>
+          <v-btn class="sub-menu-btn " style="box-shadow: 0px 5px 25px rgba(0, 0, 0, 0); border: 1px solid #D9D9D9;
+border-radius: 50px;" >
+            <p style="font-size: 12px">Illustration</p>
+            <span class="badge " style="margin-left: 16px;">2.7K</span>
+          </v-btn>
+          <v-btn class="sub-menu-btn " style="box-shadow: 0px 5px 25px rgba(0, 0, 0, 0); border: 1px solid #D9D9D9;
+border-radius: 50px;" >
+            <p style="font-size: 12px">Branding</p>
+            <span class="badge " style="margin-left: 16px;">2.7K</span>
+          </v-btn>
+          <v-btn class="sub-menu-btn " style="box-shadow: 0px 5px 25px rgba(0, 0, 0, 0); border: 1px solid #D9D9D9;
+border-radius: 50px;" >
+            <p style="font-size: 12px">Product Design</p>
+            <span class="badge " style="margin-left: 16px;">2.7K</span>
+          </v-btn>
+          <v-btn class="sub-menu-btn " style="box-shadow: 0px 5px 25px rgba(0, 0, 0, 0); border: 1px solid #D9D9D9;
+border-radius: 50px;" >
+            <p style="font-size: 12px">Typography</p>
+            <span class="badge " style="margin-left: 16px;">2.7K</span>
+          </v-btn>
+
+
+          <!-- <v-btn class="sub-menu-btn" >
             Illustration
             <span class="badge">2.7K</span>
           </v-btn>
@@ -141,14 +177,14 @@
           <v-btn class="sub-menu-btn">
             Typography
             <span class="badge">2.7K</span>
-          </v-btn>
+          </v-btn> -->
         </div>
       </v-col>
     </v-row>
 
     <v-row>
       <v-col cols="4">
-        <v-card>
+        <v-card style="box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.15); border-radius: 0px">
           <v-img src="@/assets/gypsi-1.png" class="align-end" gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
             height="200px" cover></v-img>
           <v-card-title class="text-black">Mall-e</v-card-title>
@@ -168,7 +204,7 @@
         </v-card>
       </v-col>
       <v-col cols="4">
-        <v-card>
+        <v-card style="box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.15); border-radius: 0px">
           <v-img src="@/assets/gypsi-1.png" class="align-end" gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
             height="200px" cover></v-img>
           <v-card-title class="text-black">Mall-e</v-card-title>
@@ -176,8 +212,8 @@
             1,000 miles of wonder
           </v-card-subtitle>
           <v-card-actions>
-            <v-btn elevation="4">
-              View App
+            <v-btn elevation="4" style="background-color: #FA2964; border-radius:50px; padding-left: 16px; padding-right: 16px;">
+              <span style="color: #fff">View all</span>
             </v-btn>
             <v-spacer></v-spacer>
             <span>
@@ -188,27 +224,7 @@
         </v-card>
       </v-col>
       <v-col cols="4">
-        <v-card>
-          <v-img src="@/assets/gypsi-1.png" class="align-end" gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
-            height="200px" cover></v-img>
-          <v-card-title class="text-black">Mall-e</v-card-title>
-          <v-card-subtitle>
-            1,000 miles of wonder
-          </v-card-subtitle>
-          <v-card-actions>
-            <v-btn elevation="4">
-              Explore
-            </v-btn>
-            <v-spacer></v-spacer>
-            <span>
-              <v-icon>mdi-eye</v-icon>
-              1336
-            </span>
-          </v-card-actions>
-        </v-card>
-      </v-col>
-      <v-col cols="4">
-        <v-card>
+        <v-card style="box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.15); border-radius: 0px">
           <v-img src="@/assets/gypsi-1.png" class="align-end" gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
             height="200px" cover></v-img>
           <v-card-title class="text-black">Mall-e</v-card-title>
@@ -228,7 +244,7 @@
         </v-card>
       </v-col>
       <v-col cols="4">
-        <v-card>
+        <v-card style="box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.15); border-radius: 0px">
           <v-img src="@/assets/gypsi-1.png" class="align-end" gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
             height="200px" cover></v-img>
           <v-card-title class="text-black">Mall-e</v-card-title>
@@ -248,7 +264,7 @@
         </v-card>
       </v-col>
       <v-col cols="4">
-        <v-card>
+        <v-card style="box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.15); border-radius: 0px">
           <v-img src="@/assets/gypsi-1.png" class="align-end" gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
             height="200px" cover></v-img>
           <v-card-title class="text-black">Mall-e</v-card-title>
@@ -268,7 +284,7 @@
         </v-card>
       </v-col>
       <v-col cols="4">
-        <v-card>
+        <v-card style="box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.15); border-radius: 0px">
           <v-img src="@/assets/gypsi-1.png" class="align-end" gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
             height="200px" cover></v-img>
           <v-card-title class="text-black">Mall-e</v-card-title>
@@ -288,7 +304,7 @@
         </v-card>
       </v-col>
       <v-col cols="4">
-        <v-card>
+        <v-card style="box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.15); border-radius: 0px">
           <v-img src="@/assets/gypsi-1.png" class="align-end" gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
             height="200px" cover></v-img>
           <v-card-title class="text-black">Mall-e</v-card-title>
@@ -308,7 +324,27 @@
         </v-card>
       </v-col>
       <v-col cols="4">
-        <v-card>
+        <v-card style="box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.15); border-radius: 0px">
+          <v-img src="@/assets/gypsi-1.png" class="align-end" gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
+            height="200px" cover></v-img>
+          <v-card-title class="text-black">Mall-e</v-card-title>
+          <v-card-subtitle>
+            1,000 miles of wonder
+          </v-card-subtitle>
+          <v-card-actions>
+            <v-btn elevation="4">
+              Explore
+            </v-btn>
+            <v-spacer></v-spacer>
+            <span>
+              <v-icon>mdi-eye</v-icon>
+              1336
+            </span>
+          </v-card-actions>
+        </v-card>
+      </v-col>
+      <v-col cols="4">
+        <v-card style="box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.15); border-radius: 0px">
           <v-img src="@/assets/gypsi-1.png" class="align-end" gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
             height="200px" cover></v-img>
           <v-card-title class="text-black">Mall-e</v-card-title>
@@ -347,7 +383,7 @@
             Earn money by delivering food from restaurant. All you need are the skills and a bike
           </v-card-text>
           <v-card-actions align="center">
-            <v-btn elevation="0" class="mx-auto bg-info">
+            <v-btn elevation="0" class="mx-auto" style="background: #FA2964 !important">
               Explore
             </v-btn>
           </v-card-actions>
@@ -377,8 +413,8 @@
             Earn money by delivering food from restaurant. All you need are the skills and a bike
           </v-card-text>
           <v-card-actions align="center">
-            <v-btn elevation="0" class="mx-auto bg-info">
-              Explore
+            <v-btn elevation="0" class="mx-auto bg-info" >
+              View app
             </v-btn>
           </v-card-actions>
         </v-card>
@@ -565,6 +601,9 @@ export default {
 </script>
 
 <style>
+*{
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+}
 .v-text-field,.v-input__control{
   height: 50px !important;
 }
@@ -588,23 +627,42 @@ export default {
   background-color: red;
 }
 
-.coba {
-
+.search-field .v-icon.mdi-magnify {
+  background-color: blue;
+  color: white;
+  padding: 24px;
 }
+
+
+
+
+.my-custom-class {
+  background-color: red;
+}
+
 
 
 .sub-menu-btn {
   border-radius: 50px !important;
   color: black !important;
-  margin: 2px;
+
+  padding: 6px 16px !important;
+  display: flex;
+  height: 44px;
+
+
 }
 
 .sub-menu-btn.active {
   background: #C2D5E9 !important;
   border-radius: 50px !important;
   color: black !important;
-  padding: 6px 10px !important;
+  padding: 6px 16px !important;
   margin: 2px;
+  width: 139px !important;
+height: 44px !important;
+
+
 }
 
 .badge {
@@ -612,6 +670,7 @@ export default {
   background: #D9D9D9;
   color: black;
   padding: 5px;
+
 }
 
 .badge.active {
@@ -624,6 +683,16 @@ export default {
 .jumbotron-text {
   padding-top: 50px;
   padding-bottom: 50px;
+}
+.search-field .v-icon.mdi-magnify {
+  background-color: blue;
+  color: white;
+
+}
+
+.search-icon {
+  background-color: blue;
+  color: white;
 }
 
 .header-title {
